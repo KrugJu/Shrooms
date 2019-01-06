@@ -53,8 +53,6 @@ int SumWithinCoords(coord array[],int count)
     coord upperRectangle[] ={};
     coord surroundingRectangle[] = {};
 
-
-
 }
 //formula for calculating sum of rectangle with the upper left corner at (c1|r1)
 //and the lower right corner at (c2|r2)
