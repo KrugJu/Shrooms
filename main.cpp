@@ -44,8 +44,8 @@ void GetPrefixSum()
             psa[i][j] = psa[i-1][j] + psa[i][j-1] - psa[i-1][j-1] + a[i][j];
         }
     }
-    for (int i = 0; i < W; i++) {
-        for (int j = 0; j < W; j++)
+    for (int i = 1; i < W; i++) {
+        for (int j = 1; j < W; j++)
             printf("%d ",psa[i][j]);
         printf("\n");
     }
@@ -69,4 +69,8 @@ int SumOfCoords(coord array[])
     //array[2] lower left corner
     //array[3] lower right corner
     return psa[c2 + 1][r2 + 1] - psa[c1][r2 + 1] - psa[c2 + 1][r1] + psa[c1][r1];
+}
+void GenerateQuader()
+{
+    
 }
