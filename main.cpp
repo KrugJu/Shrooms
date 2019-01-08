@@ -32,23 +32,11 @@ int main() {
 
 void GetPrefixSum()
 {
-    /*
-    for (int i = 1; i <= W; i++) {
-        for (int j = 1; j <= W; j++)
-            printf("%d ",a[i][j]);
-        printf("\n");
-    }*/
-    //printf("---------------------------------\n");
-    //reihenweise
-    for (int i = 1; i <= W; i++){
-        for(int j =1;j<=W;j++){
-            psa[i][j] =psa[i][j-1] + a[i][j];
-        }
-    }
-    //spaltenweise
-    for (int i = 1; i <= W; i++){
-        for(int j =1;j<=W;j++){
-            psa[j][i] = psa[j-1][i] + psa[j][i];
+    for (int x = 1; x <= W; x++)
+    {
+        for (int y = 1; y <= W; y++)
+        {
+            psa[x][y] = psa[x - 1][y] + psa[x][y - 1] - psa[x - 1][y - 1] + a[x][y];
         }
     }
 
